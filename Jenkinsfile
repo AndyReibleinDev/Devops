@@ -2,15 +2,23 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
   agent { docker { image 'node:16.17.1-alpine' } }
+  tools {nodejs "Node12"}
+  environment {
+    CHROME_BIN = '/bin/google-chrome'
+   }
   stages {
     stage('build') {
       steps {
         sh 'node --version'
       }
     }
+    stage('dependencies') {
+      steps {
+        sh 'npm install'
+      }
+    }
     stage("test") {
       steps {
-        sh 'npm i' 
         sh 'npx cypress run'
       }
     }
