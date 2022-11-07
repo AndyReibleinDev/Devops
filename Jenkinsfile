@@ -7,6 +7,12 @@ pipeline {
       steps {
         sh 'node --version'
       }
+      stage("test") {
+        steps {
+          npm i, 
+          npx cypress run
+        }
+      }
     }
   }
 }
