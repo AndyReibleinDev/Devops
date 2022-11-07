@@ -6,12 +6,12 @@ pipeline {
     stage('build') {
       steps {
         sh 'node --version'
-      }
-      stage("test") {
-        steps {
-          npm i, 
-          npx cypress run
-        }
+      },
+    }
+    stage("test") {
+      steps {
+        npm i, 
+        npx cypress run
       }
     }
   }
