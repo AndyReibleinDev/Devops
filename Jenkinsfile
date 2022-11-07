@@ -5,8 +5,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        // sh 'node --version',
-        sh 'npx cypress run'
+        sh 'node --version'
       }
     }
   }
