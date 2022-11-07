@@ -10,8 +10,8 @@ pipeline {
     }
     stage("test") {
       steps {
-        npm i, 
-        npx cypress run
+        sh 'npm i', 
+        sh 'npx cypress run'
       }
     }
   }
