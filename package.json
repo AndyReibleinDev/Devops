@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "cy:run": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first"
+    "cy:run": "cypress run",
+    "cypress:ci": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first"
   },
   "devDependencies": {
     "cypress": "10.0.3",
