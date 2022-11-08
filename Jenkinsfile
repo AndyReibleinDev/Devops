@@ -1,24 +1,19 @@
-// Jenkinsfile (Declarative Pipeline)
-/* Requires the Docker Pipeline plugin */
 pipeline {
-  agent { docker { image 'node:16.17.1-alpine' } }
+  agent any
+  tools {nodejs "node"}
+
   environment {
     CHROME_BIN = '/bin/google-chrome'
    }
   stages {
-    stage('build') {
-      steps {
-        sh 'node --version'
-      }
-    }
     stage('dependencies') {
       steps {
-        echo 'Dependencies...'
+        sh 'npm install'
       }
     }
     stage("test") {
       steps {
-        echo 'Testing...'
+        sh 'npm run cy:run'
       }
     }
     stage("deploy") {
