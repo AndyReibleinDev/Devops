@@ -13,7 +13,7 @@ pipeline {
     }
     stage('dependencies') {
       steps {
-        sh 'npm install'
+        sh 'node --version'
       }
     }
     stage("test") {
