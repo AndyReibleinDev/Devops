@@ -18,7 +18,7 @@ pipeline {
     }
     stage("test") {
       steps {
-        sh 'npx cypress run'
+        sh 'node --version'
       }
     }
   }
