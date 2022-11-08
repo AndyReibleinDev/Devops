@@ -13,12 +13,17 @@ pipeline {
     }
     stage('dependencies') {
       steps {
-        sh 'node --version'
+        echo 'Dependencies...'
       }
     }
     stage("test") {
       steps {
-        sh 'node --version'
+        echo 'Testing...'
+      }
+    }
+    stage("deploy") {
+      steps {
+        echo 'Deploying...'
       }
     }
   }
