@@ -16,9 +16,9 @@ pipeline {
         sh 'npm test'
       }
     }
-    stage("test") {
+    stage("eslint") {
       steps {
-        sh 'npm test'
+        sh 'npx eslint .'
       }
     }
     stage("deploy") {
