@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage("build") {
       steps {
-        sh 'docker build -t 6c5a99c3d1f116ca334d85f3a43d8e56411f4fc9 -f Dockerfile .'
+        sh 'docker build .'
       }
     }
     stage('dependencies') {
