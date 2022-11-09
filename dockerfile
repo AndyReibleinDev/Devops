@@ -1,3 +1,4 @@
-FROM node:16.13.1-alpine
-FROM ubuntu:latest
-WORKDIR /app
+FROM jenkins/jenkins:lts-jdk11
+USER root
+RUN echo 'Testing...'
+USER jenkins
