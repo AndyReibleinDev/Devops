@@ -16,11 +16,6 @@ pipeline {
         sh 'npm run cy:run'
       }
     }
-    stage("anotherTest") {
-      steps {
-        sh 'npm run cypress:ci'
-      }
-    }
     stage("deploy") {
       steps {
         echo 'Deploying...'
@@ -28,3 +23,4 @@ pipeline {
     }
   }
 }
+
