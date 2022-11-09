@@ -1,2 +1,1 @@
-FROM jenkins/jenkins:lts-jdk11
-USER root
+FROM node:14.19.1
