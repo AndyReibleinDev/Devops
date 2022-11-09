@@ -12,7 +12,7 @@ pipeline {
     }
     stage("test") {
       steps {
-        sh 'npm cy:run'
+        sh 'npm run cy:run'
       }
     }
     stage("deploy") {
