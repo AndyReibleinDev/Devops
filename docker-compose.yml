@@ -5,3 +5,11 @@ services:
     image: jenkins/jenkins:lts-jdk11
     ports: 
       - 8080:8080
+  app:
+    image: node:12-alpine
+    command: sh -c "npm install && npm start"
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
