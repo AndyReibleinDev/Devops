@@ -1,6 +1,6 @@
 pipeline {
-  agent { Dockerfile true }
-  // tools {nodejs "node"}
+  agent any
+  tools {nodejs "node"}
   environment {
     CHROME_BIN = '/bin/google-chrome'
    }
